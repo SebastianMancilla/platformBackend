@@ -63,6 +63,24 @@ Send a POST request and put the file in __from-data__ as 'file'
 when the process is success send an email, in this project received in the inbox the fakeSMTP
 ![SupplierCSV](imagesMD/respEmailCsv.png)
 
+# Frontend View
+Only can see the suppliers, products and authorized channels in these platform
+The project is in my repositories __platFront__
+
+![Menu](imagesMD/menuPlat.png)
+
+![Suppliers](imagesMD/suppliersInfo.png)
+
+![SuppliersInfo](imagesMD/Supplierinformation.png)
+
+![Products](imagesMD/Products.png)
+
+![AuthChannels](imagesMD/Channels.png)
+
+
+
+
+
 
 # Tools Used
 
