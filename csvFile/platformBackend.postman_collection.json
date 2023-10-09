@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "7255dcb0-c152-428b-9cce-3a201e094d31",
+		"name": "platformBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9484644"
+	},
+	"item": [
+		{
+			"name": "get suppliers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQxYTViMTRlLTQ3ZDktNGU4NS05YWFhLWRiZjk5YTFjYWQ2ZCIsImlhdCI6MTY5NjQwNjI1MCwiZXhwIjoxNjk2NDI3ODUwfQ.MCYhAiGH2IgSeYirHFSnU_KwDML6x8FH4xIVXR5AQV8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/supplier/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"supplier",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create supplier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Maria Fernanda\",\r\n    \"notificationEmail\": \"mf@notis.com\",\r\n    \"alertEmail\": \"mf@notis.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/supplier/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"supplier",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search supplier by code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/supplier/26320890-87ac-4a81-9e2c-8c884b70bfa3",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"supplier",
+						"26320890-87ac-4a81-9e2c-8c884b70bfa3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a supplier",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"notificationEmail\": \"maria@noti.com\",\r\n    \"alertEmail\": \"maria@noti.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/supplier/26320890-87ac-4a81-9e2c-8c884b70bfa3",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"supplier",
+						"26320890-87ac-4a81-9e2c-8c884b70bfa3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"Computadora\",\r\n        \"description\": \"AllienWare 24\",\r\n        \"amount\": 20000,\r\n         \"supplierCode\": \"26320890-87ac-4a81-9e2c-8c884b70bfa3\"\r\n\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product by Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/product/6bc0e58f-cb8c-4578-8a66-c5d4af71f355",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"product",
+						"6bc0e58f-cb8c-4578-8a66-c5d4af71f355"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update  product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"code\": \"6bc0e58f-cb8c-4578-8a66-c5d4af71f355\",\r\n    \"name\": \"Agua pura\",\r\n    \"description\": \"Agua pura Salvavidas\",\r\n    \"amount\": 700.0,\r\n    \"supplier_id\": {\r\n        \"supp_id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/product/6bc0e58f-cb8c-4578-8a66-c5d4af71f355",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"product",
+						"6bc0e58f-cb8c-4578-8a66-c5d4af71f355"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get authorizedChannel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/authorized-channel/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"authorized-channel",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create authorized channel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tienda El Rino\",\r\n    \"supplierCode\": \"26320890-87ac-4a81-9e2c-8c884b70bfa3\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/authorized-channel/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"authorized-channel",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get channel by code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/authorized-channel/6003231c-f56b-4759-bf1f-b9d478e09449",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"authorized-channel",
+						"6003231c-f56b-4759-bf1f-b9d478e09449"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update channel by Code",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"channel_id\": 4,\r\n    \"code\": \"3936cb14-3c43-4a2a-acdc-d8c989712464\",\r\n    \"name\": \"Tienda El Rosario\",\r\n     \"supplier\": {\r\n        \"supp_id\": 1,\r\n        \"name\": \"Chritopher Herrera\\n\",\r\n        \"code\": \"82839\",\r\n        \"notification_email\": \"ch@noti.com\",\r\n        \"alert_email\": \"ch@noti.com\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/authorized-channel/3936cb14-3c43-4a2a-acdc-d8c989712464",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"authorized-channel",
+						"3936cb14-3c43-4a2a-acdc-d8c989712464"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete supplier",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/supplier/d4b79bd8-665f-40a0-acb2-59c84d001539",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"supplier",
+						"d4b79bd8-665f-40a0-acb2-59c84d001539"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete products by Code",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/product/d4b79bd8-665f-40a0-acb2-59c84d001539",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"product",
+						"d4b79bd8-665f-40a0-acb2-59c84d001539"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete channel by Code",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/authorized-channel/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"authorized-channel",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload CSV FIle to Create Suppliers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Sebas/Escritorio/csvFile/suppliers.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/api/supplier/upload-csv/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"supplier",
+						"upload-csv",
+						""
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
