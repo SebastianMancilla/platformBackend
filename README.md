@@ -2,7 +2,7 @@
   <a href="https://spring.io/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/1200px-Spring_Framework_Logo_2018.svg.png" width="200" alt="Nest Logo" /></a>
 </p>
 
-# PlatForm Backend
+# Platform Backend
 
 1. Clone the repository
 2. Run the ```docker-compose.yaml``` for up image DB and PgAdmin
